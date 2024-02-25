@@ -1,0 +1,11 @@
+<table class="matrix">
+    <tr *ngFor="let l of data; let i=index">
+        <td *ngFor="let val of l; let j=index"
+            (pointerenter)="pointerenterEmit(i,j)"
+            (pointerleave)="pointerleaveEmit()"
+            [class.highlight]="isHighlighted(i,j)">
+            <!-- <td *ngFor="let val of data.at(i)"> -->
+            {{val}}
+        </td>
+    </tr>
+</table>

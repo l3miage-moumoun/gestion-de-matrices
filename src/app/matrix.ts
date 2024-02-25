@@ -129,3 +129,13 @@ export function multiplyIntMatrixes<L extends number, C extends number>(M1: Matr
 // multiplyIntMatrixes(m1, m2);
 // multiplyIntMatrixes(m1, m3);
 // multiplyIntMatrixes(m3, m1);
+
+
+
+export type HighlightLine = {line: number};
+export type HighlightColumn = {column: number};
+export type HighlightCell = {cell: [line: number, column: number]};
+export type Highlight = undefined
+                      | HighlightLine
+                      | HighlightColumn
+                      | HighlightCell;

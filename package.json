@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /l3m-tp-2-matrix-2023-2024/",
+    "build": "ng build --base-href /gestion-de-matrices-l3-miage-2023-2024-l3miage-khalili/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

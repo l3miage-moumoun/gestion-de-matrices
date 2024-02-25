@@ -1,0 +1,26 @@
+$W: 32px;
+
+:host {
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+
+    table.matrix {
+        border-collapse: collapse;
+        border: 1px solid black;
+
+        td {
+            border: 1px solid black;
+            width: $W;
+            height: $W;
+
+            &.highlight {
+                background-color: #ff0;
+            }
+        }
+
+        input {
+            width: 2em;
+        }
+    }
+}

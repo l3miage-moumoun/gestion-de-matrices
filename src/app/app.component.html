@@ -1,3 +1,47 @@
 <h1>L3M 2023-2024 : Matrices</h1>
 
-à compléter...
+<h3>Dimension des Matrices</h3>
+
+<pre>
+<label for="L1">M1 lines   </label> <input type="number"
+    [ngModel]="_sigL1()"
+    (ngModelChange)="_sigL1.set($event)"
+/>
+<label for="H1">M1 columns </label> <input type="number"
+    [ngModel]="_sigH1()"
+    (ngModelChange)="_sigH1.set($event)"
+/>
+</pre>
+
+<pre>
+<label for="L2">M2 lines   </label> <input type="number"
+    [ngModel]="_sigL2()"
+    (ngModelChange)="_sigL2.set($event)"
+/>
+<label for="H1">M2 columns </label> <input type="number"
+    [ngModel]="_sigH2()"
+    (ngModelChange)="_sigH2.set($event)"
+/>
+</pre><br/>
+
+<pre>
+    Matrice 1 = <app-matrix [data]="_sigM1()" [highlight]="sigHhilightInM1()"></app-matrix> Matrice 2 = <app-matrix [data]="_sigM2()" [highlight]="sigHhilightInM2()"></app-matrix>
+</pre>
+
+<div *ngIf="sigM1PlusM2() === undefined; else afficheMatriceS">
+    <label>M1 + M2 non définie</label>
+</div>
+<ng-template #afficheMatriceS>
+    <pre>
+                M1 + M2 = <app-matrix [data]="sigM1PlusM2()" [highlight]="sigHhilightInM1plusM2()" (pointerOver)="overM1plusM2($event)"></app-matrix>
+    </pre>
+</ng-template>
+
+<div *ngIf="sigM1xM2() === undefined; else afficheMatriceM">
+    <label>M1 * M2 non définie</label>
+</div>
+<ng-template #afficheMatriceM>
+    <pre>
+                M1 * M2 = <app-matrix [data]="sigM1xM2()" [highlight]="sigHhilightInM1xM2()" (pointerOver)="overM1xM2($event)"></app-matrix>
+    </pre>
+</ng-template>
