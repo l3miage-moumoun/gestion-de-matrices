@@ -56,6 +56,11 @@ export class AppComponent<L1 extends number, H1 extends number, L2 extends numbe
       this.sigHhilightInM1.set({'line':c[0], 'column':c[1]}) ;
       this.sigHhilightInM2.set({'line':c[0], 'column':c[1]}) ;
     }
+    else {
+      this.sigHhilightInM1plusM2.set(undefined) ;
+      this.sigHhilightInM1.set(undefined) ;
+      this.sigHhilightInM2.set(undefined) ;
+    }
   }
 
   overM1xM2( c?: [line: number, column: number] ): void {
@@ -63,6 +68,11 @@ export class AppComponent<L1 extends number, H1 extends number, L2 extends numbe
       this.sigHhilightInM1xM2.set({'line':c[0], 'column':c[1]}) ;
       this.sigHhilightInM1.set({'line':c[0]}) ;
       this.sigHhilightInM2.set({'column':c[1]}) ;
+    }
+    else{
+      this.sigHhilightInM1xM2.set(undefined) ;
+      this.sigHhilightInM1.set(undefined) ;
+      this.sigHhilightInM2.set(undefined) ;
     }
   }
 
